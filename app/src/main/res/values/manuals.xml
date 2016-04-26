@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="manuals">
+        <item>HDAS-000|설비1 로봇1 설치법</item>
+        <item>HDAS-001|설비1 로봇1 세팅법</item>
+        <item>HDAS-002|설비1 로봇1 테스트</item>
+    </string-array>
+</resources>

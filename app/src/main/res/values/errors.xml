@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="errors">
+        <item>ABCD-000|에러1 발생시 해결법</item>
+        <item>BCDE-001|에러2 발생시 해결법</item>
+        <item>CDEF-002|에러3 발생시 해결법</item>
+    </string-array>
+</resources>

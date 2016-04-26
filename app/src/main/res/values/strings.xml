@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">해결사</string>
+
+    <string name="title_activity_fullscreen">해결사</string>
+    <string name="dummy_button"></string>
+    <string name="dummy_content">해결사\n\n라온로보틱스</string>
+    <string name="title_activity_login">로그인</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">이메일</string>
+    <string name="prompt_password">비밀번호</string>
+    <string name="action_sign_in">로그인 또는 가입</string>
+    <string name="action_sign_in_short">로그인</string>
+    <string name="error_invalid_email">이메일이 유효하지 않습니다.</string>
+    <string name="error_invalid_password">비밀번호가 유효하지 않습니다.</string>
+    <string name="error_incorrect_password">비밀번호가 맞지 않습니다.</string>
+    <string name="error_field_required">필수 입력</string>
+    <string name="permission_rationale">"이메일 확인을 위해서 연락처 접근권한이 필요합니다."</string>
+    <string name="title_activity_error_detail">에러 정보</string>
+    <string name="title_activity_manual_detail">설치 방법</string>
+    <string name="find_error_button">에러 코드 검색</string>
+    <string name="select_manual_button">업체별 설치 방법</string>
+    <string name="send_report_button">틀린 내용 전송</string>
+    <string name="exit_button">해결사 종료</string>
+    <string name="find_button">검색</string>
+    <string name="send_button">전송</string>
+    <string name="find_error_hint">입력</string>
+    <string name="error_code">에러코드</string>
+    <string name="name_code_text">코드</string>
+    <string name="descript_text">설명</string>
+    <string name="report_hint">여러줄 입력 가능</string>
+    <string name="factory_text">업체</string>
+</resources>
