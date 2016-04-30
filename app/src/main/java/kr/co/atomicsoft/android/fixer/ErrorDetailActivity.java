@@ -32,6 +32,7 @@ public class ErrorDetailActivity extends AppCompatActivity {
         });
 
         Intent intent = getIntent();
+        String fileName = intent.getStringExtra("fileName");
         String nameCode = intent.getStringExtra("nameCode");
         String descript = intent.getStringExtra("descript");
 
@@ -39,7 +40,7 @@ public class ErrorDetailActivity extends AppCompatActivity {
         ((TextView)findViewById(R.id.errorDescriptText)).setText(descript);
 
         ((WebView)findViewById(R.id.errorWebView)).loadUrl(
-                "file:///android_asset/"+nameCode+".html");
+                "file:///android_asset/"+fileName+".html");
         //WebView.loadData(source, "text/html", "UTF-8");
     }
 

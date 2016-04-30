@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kr.co.atomicsoft.android.fixer.MainActivity">
+    tools:context="kr.co.atomicsoft.android.fixer.MainActivity"
+    android:background="#cccccc">
 
     <LinearLayout
         android:orientation="vertical"
@@ -20,17 +21,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/find_error_button"
-                android:id="@+id/findErrorButton" />
+                android:id="@+id/findErrorButton"
+                android:background="@mipmap/error_code_find_button"
+                android:layout_margin="4dp" />
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/select_manual_button"
-                android:id="@+id/selectManualButton" />
+                android:id="@+id/selectManualButton"
+                android:background="@mipmap/factory_setup_manual_button"
+                android:layout_margin="4dp" />
 
         </LinearLayout>
 
@@ -39,18 +44,39 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="@string/send_report_button"
-                android:id="@+id/sendReportButton" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/find_sys_var_button"
+                android:id="@+id/findSysVarButton"
+                android:background="@mipmap/sys_var_find_button"
+                android:layout_margin="4dp" />
 
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:text="@string/exit_button"
-                android:id="@+id/exitButton" />
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_report_button"
+                android:id="@+id/sendReportButton"
+                android:background="@mipmap/bug_report_send_button"
+                android:layout_margin="4dp" />
+
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exit_button"
+                android:id="@+id/exitButton"
+                android:background="@mipmap/fixer_exit_button"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

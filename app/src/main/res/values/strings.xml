@@ -20,12 +20,14 @@
     <string name="title_activity_manual_detail">설치 방법</string>
     <string name="find_error_button">에러 코드 검색</string>
     <string name="select_manual_button">업체별 설치 방법</string>
+    <string name="find_sys_var_button">시스템 변수 검색</string>
     <string name="send_report_button">틀린 내용 전송</string>
     <string name="exit_button">해결사 종료</string>
     <string name="find_button">검색</string>
     <string name="send_button">전송</string>
     <string name="find_error_hint">입력</string>
-    <string name="error_code">에러코드</string>
+    <string name="error_code">에러 코드</string>
+    <string name="sys_var">시스템 변수</string>
     <string name="name_code_text">코드</string>
     <string name="descript_text">설명</string>
     <string name="report_hint">여러줄 입력 가능</string>

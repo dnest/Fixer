@@ -1,0 +1,3 @@
+SYSV-000|$PENDANTFIG.$touch_mask|iPendant touch screen mask
+SYSV-001|$UI_PANEDATA[1].$MOUSE.$time|Time-stamp of the mouse action.
+SYSV-002|$UNDO_CFG STRUCTURE|Undo Configuration Structure

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,16 +17,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, FullscreenActivity.class);
         startActivity(intent);
 
-        Button findErrorButton = (Button)findViewById(R.id.findErrorButton);
+        ImageButton findErrorButton = (ImageButton)findViewById(R.id.findErrorButton);
         findErrorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FindErrorActivity.class);
+                intent.putExtra("category", "0");
                 startActivity(intent);
             }
         });
 
-        Button selectManualButton = (Button)findViewById(R.id.selectManualButton);
+        ImageButton selectManualButton = (ImageButton)findViewById(R.id.selectManualButton);
         selectManualButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +36,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button sendReportButton = (Button)findViewById(R.id.sendReportButton);
+        ImageButton findSysVarButton = (ImageButton)findViewById(R.id.findSysVarButton);
+        findSysVarButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FindErrorActivity.class);
+                intent.putExtra("category", "1");
+                startActivity(intent);
+            }
+        });
+
+        ImageButton sendReportButton = (ImageButton)findViewById(R.id.sendReportButton);
         sendReportButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button exitButton = (Button)findViewById(R.id.exitButton);
+        ImageButton exitButton = (ImageButton)findViewById(R.id.exitButton);
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

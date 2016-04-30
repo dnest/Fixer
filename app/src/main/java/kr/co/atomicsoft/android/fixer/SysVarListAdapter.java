@@ -12,10 +12,10 @@ import java.util.ArrayList;
 /**
  * Created by dnest on 2016. 4. 25..
  */
-public class ErrorListAdapter extends BaseAdapter {
+public class SysvarListAdapter extends BaseAdapter {
     private ArrayList<ErrorListItem> list = new ArrayList<ErrorListItem>();
 
-    public ErrorListAdapter(){}
+    public SysvarListAdapter(){}
 
 
     @Override
@@ -41,7 +41,7 @@ public class ErrorListAdapter extends BaseAdapter {
         // "listview_item" Layout을 inflate하여 convertView 참조 획득.
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.layout_error_list_item, parent, false);
+            convertView = inflater.inflate(R.layout.layout_sysvar_list_item, parent, false);
         }
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
@@ -61,13 +61,13 @@ public class ErrorListAdapter extends BaseAdapter {
     }
 
     //public void addItem(Drawable icon, String title, String desc) {
-    public void addItem(String nameCode, String description) {
+    public void addItem(String fileName, String nameCode, String descript) {
         ErrorListItem item = new ErrorListItem();
 
         //item.setIcon(icon);
-        item.setFileName(nameCode);
+        item.setFileName(fileName);
         item.setNameCode(nameCode);
-        item.setDescript(description);
+        item.setDescript(descript);
 
         list.add(item);
     }
