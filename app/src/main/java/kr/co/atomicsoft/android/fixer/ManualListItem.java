@@ -5,6 +5,16 @@ package kr.co.atomicsoft.android.fixer;
  */
 public class ManualListItem {
     private String nameCode;
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    private String fileName;
     private String descript;
 
     public String getNameCode() {

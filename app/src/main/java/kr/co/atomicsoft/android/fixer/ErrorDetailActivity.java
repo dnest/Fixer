@@ -11,13 +11,28 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 public class ErrorDetailActivity extends AppCompatActivity {
-
+    String fileName;
+    String nameCode;
+    String descript;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        fileName = intent.getStringExtra("fileName");
+        nameCode = intent.getStringExtra("nameCode");
+        descript = intent.getStringExtra("descript");
+
+        ((TextView)findViewById(R.id.errorNameCodeText)).setText(nameCode);
+        ((TextView)findViewById(R.id.errorDescriptText)).setText(descript);
+
+        ((WebView)findViewById(R.id.errorWebView)).loadUrl(
+                "file:///android_asset/"+fileName+".html");
+        //WebView.loadData(source, "text/html", "UTF-8");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -27,21 +42,12 @@ public class ErrorDetailActivity extends AppCompatActivity {
                 //        .setAction("Action", null).show();
 
                 Intent intent = new Intent(ErrorDetailActivity.this, SendReportActivity.class);
+                intent.putExtra("fileName", fileName);
+                intent.putExtra("nameCode", nameCode);
+                intent.putExtra("descript", descript);
                 startActivity(intent);
             }
         });
-
-        Intent intent = getIntent();
-        String fileName = intent.getStringExtra("fileName");
-        String nameCode = intent.getStringExtra("nameCode");
-        String descript = intent.getStringExtra("descript");
-
-        ((TextView)findViewById(R.id.errorNameCodeText)).setText(nameCode);
-        ((TextView)findViewById(R.id.errorDescriptText)).setText(descript);
-
-        ((WebView)findViewById(R.id.errorWebView)).loadUrl(
-                "file:///android_asset/"+fileName+".html");
-        //WebView.loadData(source, "text/html", "UTF-8");
     }
 
 }

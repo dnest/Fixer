@@ -2,7 +2,6 @@ package kr.co.atomicsoft.android.fixer;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.content.res.XmlResourceParser;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -92,7 +91,7 @@ public class FindErrorActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(FindErrorActivity.this, ErrorDetailActivity.class);
-                        ListView listview = (ListView) findViewById(R.id.errorListView);
+                        ListView listview = (ListView) findViewById(R.id.findListView);
                         ErrorListItem item = (ErrorListItem)listview.getAdapter().getItem(position);
                         intent.putExtra("fileName", item.getFileName());
                         intent.putExtra("nameCode", item.getNameCode());
@@ -107,10 +106,10 @@ public class FindErrorActivity extends AppCompatActivity {
 
     private ListView GetSysvarList() {
 
-        String key = ((EditText)findViewById(R.id.findErrorText)).getText().toString();
+        String key = ((EditText)findViewById(R.id.findCodeText)).getText().toString();
 
         // 리스트뷰 참조 및 Adapter달기
-        ListView listView = (ListView) findViewById(R.id.errorListView);
+        ListView listView = (ListView) findViewById(R.id.findListView);
 
         // Adapter 생성
         SysvarListAdapter adapter = new SysvarListAdapter() ;
@@ -133,10 +132,10 @@ public class FindErrorActivity extends AppCompatActivity {
 
     private ListView GetErrorList() {
 
-        String key = ((EditText)findViewById(R.id.findErrorText)).getText().toString();
+        String key = ((EditText)findViewById(R.id.findCodeText)).getText().toString();
 
         // 리스트뷰 참조 및 Adapter달기
-        ListView listView = (ListView) findViewById(R.id.errorListView);
+        ListView listView = (ListView) findViewById(R.id.findListView);
 
         // Adapter 생성
         ErrorListAdapter adapter = new ErrorListAdapter() ;

@@ -37,6 +37,7 @@ public class SelectManualActivity extends AppCompatActivity {
                 Intent intent = new Intent(SelectManualActivity.this, ManualDetailActivity.class);
                 ListView listview = (ListView) findViewById(R.id.manualListView);
                 ManualListItem item = (ManualListItem)listview.getAdapter().getItem(position);
+                intent.putExtra("fileName", item.getFileName());
                 intent.putExtra("nameCode", item.getNameCode());
                 intent.putExtra("descript", item.getDescript());
                 startActivity(intent);

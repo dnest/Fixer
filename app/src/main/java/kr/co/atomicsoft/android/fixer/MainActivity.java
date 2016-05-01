@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SendReportActivity.class);
+                intent.putExtra("fileName", "");
+                intent.putExtra("nameCode", "담당자에게...");
+                intent.putExtra("descript", "틀린 내용을 적어주세요.");
                 startActivity(intent);
             }
         });

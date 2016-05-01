@@ -11,6 +11,9 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 public class ManualDetailActivity extends AppCompatActivity {
+    String fileName;
+    String nameCode;
+    String descript;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,18 @@ public class ManualDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manual_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        fileName = intent.getStringExtra("fileName");
+        nameCode = intent.getStringExtra("nameCode");
+        descript = intent.getStringExtra("descript");
+
+        ((TextView)findViewById(R.id.manualNameCodeText)).setText(nameCode);
+        ((TextView)findViewById(R.id.manualDescriptText)).setText(descript);
+
+        ((WebView)findViewById(R.id.manualWebView)).loadUrl(
+                "file:///android_asset/" + fileName + ".html");
+        //WebView.loadData(source, "text/html", "UTF-8"
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -27,20 +42,12 @@ public class ManualDetailActivity extends AppCompatActivity {
                 //        .setAction("Action", null).show();
 
                 Intent intent = new Intent(ManualDetailActivity.this, SendReportActivity.class);
+                intent.putExtra("fileName", fileName);
+                intent.putExtra("nameCode", nameCode);
+                intent.putExtra("descript", descript);
                 startActivity(intent);
             }
         });
-
-        Intent intent = getIntent();
-        String nameCode = intent.getStringExtra("nameCode");
-        String descript = intent.getStringExtra("descript");
-
-        ((TextView)findViewById(R.id.manualNameCodeText)).setText(nameCode);
-        ((TextView)findViewById(R.id.manualDescriptText)).setText(descript);
-
-        ((WebView)findViewById(R.id.manualWebView)).loadUrl(
-                "file:///android_asset/" + nameCode + ".html");
-        //WebView.loadData(source, "text/html", "UTF-8"
     }
 
 }

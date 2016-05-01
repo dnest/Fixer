@@ -32,7 +32,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/findErrorText"
+                android:id="@+id/findCodeText"
                 android:layout_weight="1"
                 android:hint="@string/find_error_hint" />
 
@@ -46,7 +46,7 @@
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/errorListView"
+            android:id="@+id/findListView"
             android:choiceMode="singleChoice" />
     </LinearLayout>
 

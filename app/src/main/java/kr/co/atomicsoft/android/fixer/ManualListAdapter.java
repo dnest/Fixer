@@ -65,6 +65,7 @@ public class ManualListAdapter extends BaseAdapter {
         ManualListItem item = new ManualListItem();
 
         //item.setIcon(icon);
+        item.setFileName(title);
         item.setNameCode(title);
         item.setDescript(desc);
 
